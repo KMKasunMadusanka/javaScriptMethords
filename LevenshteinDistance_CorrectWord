@@ -246,33 +246,3 @@ var locationResourse = [
 
 */
 
-
-var getPresentageOfMatching = function  (requredLocation, allLocations) {
- 
-var location = "";
-var locationValue=0;
-var min= levDist(requredLocation, allLocations[0].name);
-
-
-   for(var x = 1; x<allLocations.length; x++) {
- 
-    
- locationValue= levDist(requredLocation, allLocations[x].name);
- 
- if(locationValue < min ){
- 
-       min = locationValue;
-       location = allLocations[x].name;
-        }
-
-
-     }
-  
-  var wordLength = Math.max(requredLocation.length, location.length);
-  var result = wordLength-min;
-  var presentage = result/wordLength*100;
-
-
-return presentage;
-}
-
